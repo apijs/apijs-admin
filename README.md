@@ -30,3 +30,7 @@ express.use('/admin', staticDir);
 ## 注意问题
 
 1. 由于静态是由`webpack`打包, 而在打包时就需要指定目录, 所以后台只能是`/admin/*`
+2. 使用`prepublish: release`达到发npm前打包, 通过`.gitignore`和`.npmignore`配置达到:
+    - /dist - 发布但不push
+    - /src - push但不发布
+    - /docs - 不发布
