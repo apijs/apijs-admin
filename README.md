@@ -1,119 +1,32 @@
 # Apijs后台管理
 
-## Api接口
+### 简介
 
-### 获取所有分组 - /admin/api/group
+基于`webpack`、`vue`、`element-ui`打造的`apijs`后台管理服务页面, 只是静态文件, 数据接口依赖于 [apijs](https://github.com/apijs/apijs) , 发布在npm, `apijs`把渲染层指向该模块达到前后端分离, 如:
 
-#### 返回值
+![apijs流程](./docs/process.png)
 
-```js
-{
-    items: [
-        {
-            text: '用户接口'
-        },
-        {
-            text: '验证码相关'
-        }
-    ]
-}
+## 数据接口 - 依赖apijs
+
+- [获取所有分组 - /admin/api/group](./docs/api-group.md)
+- [获取接口列表 - /admin/api/list](./docs/api-list.md)
+- [创建接口 - /admin/api/add](./docs/api-add.md)
+- [更新接口 - /admin/api/update](./docs/api-update.md)
+- [获取接口详情 - /admin/api/](./docs/api-get.md)
+
+## 使用
+
+```
+var serveStatic = require('serve-static');
+var apijsAdmin = require('apijs-admin');
+
+// 获取静态目录
+var staticDir = apijsAdmin.getPath('static');
+
+// 把/admin代理到apijs-admin
+express.use('/admin', staticDir);
 ```
 
-### 获取接口列表 - /admin/api/list
+## 注意问题
 
-#### 参数
-
-参数名 | 说明
---- | ---
-group | 分组名称,多个以`,`分隔
-type | 请求类型,多个以`,`分隔
-url | 链接名称,模糊匹配
-
-#### 返回值
-
-```js
-{
-    items: [
-        {
-            id: '唯一标识',
-            name: '接口名称',
-            url: '链接',
-            group: '分组',
-            type: 'GET,POST'
-        }
-    ]
-}
-```
-
-### 创建接口 - /admin/api/add
-
-#### 参数
-
-参数名 | 说明
---- | ---
-group | 分组名称
-type | 请求类型
-url | 链接名称
-name | 链接名称
-content | 返回值内容
-docs | 文档内容
-dataType | 返回值类型
-
-#### 返回值
-
-```js
-{
-    data: {
-        "id": "1234"
-    }
-}
-```
-
-### 更新接口 - /admin/api/update
-
-#### 参数
-
-参数名 | 说明
---- | ---
-group | 分组名称
-type | 请求类型
-url | 链接名称
-name | 链接名称
-content | 返回值内容
-docs | 文档内容
-dataType | 返回值类型
-
-#### 返回值
-
-```js
-{
-    data: {
-        "id": "1234"
-    }
-}
-```
-
-### 获取接口详情 - /admin/api/data
-
-#### 参数
-
-参数名 | 说明
---- | ---
-id | 唯一标识
-
-#### 返回值
-
-```js
-{
-    data: {
-        "id": "1234",
-        name: '接口名称',
-        url: '链接',
-        group: '分组',
-        type: 'GET,POST',
-        content: '返回值内容',
-        docs: '文档内容',
-        dataType: '返回值类型'
-    }
-}
-```
+1. 由于静态是由`webpack`打包, 而在打包时就需要指定目录, 所以后台只能是`/admin/*`
