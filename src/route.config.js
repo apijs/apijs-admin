@@ -1,6 +1,6 @@
 /**
  * @file 路由
- * @author xieyaowu <fe.xiaowu@gmail.com>
+ * @author xuexb <fe.xiaowu@gmail.com>
  */
 
 import Index from './components/index';

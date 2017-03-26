@@ -1,6 +1,6 @@
 /**
  * @file 主入口
- * @author xieyaowu <fe.xiaowu@gmail.com>
+ * @author xuexb <fe.xiaowu@gmail.com>
  */
 
 import Vue from 'vue';

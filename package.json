@@ -1,5 +1,8 @@
 {
   "name": "apijs-admin",
+  "description": "apijs后台管理web端",
+  "version": "0.0.1",
+  "main": "index.js",
   "scripts": {
     "prepublish": "npm run build",
     "dev": "webpack-dev-server -d --inline --hot --env.dev",
@@ -33,10 +36,14 @@
     "webpack": "^2.2.0-rc.4",
     "webpack-dev-server": "beta"
   },
-  "version": "0.0.1",
-  "description": "apijs管理后台",
-  "main": "index.js",
-  "author": "fe.xiaowu@gmail.com",
+  "contributors": [{
+    "name": "xuexb",
+    "email": "fe.xiaowu@gmail.com"
+  }],
+  "author": {
+    "name": "xuexb",
+    "email": "fe.xiaowu@gmail.com"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",

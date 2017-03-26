@@ -1,6 +1,6 @@
 /**
  * @file apijs-admin
- * @author xieyaowu <fe.xiaowu@gmail.con>
+ * @author xuexb <fe.xiaowu@gmail.con>
  */
 
 var path = require('path');
