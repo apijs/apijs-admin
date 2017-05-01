@@ -1,4 +1,4 @@
-/dist/
+/src/
 /webpack.config.js
 /docs
 node_modules
