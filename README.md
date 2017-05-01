@@ -8,11 +8,11 @@
 
 ## 数据接口 - 依赖apijs
 
-- [获取所有分组 - /admin/api/group](./docs/api-group.md)
-- [获取接口列表 - /admin/api/list](./docs/api-list.md)
-- [创建接口 - /admin/api/add](./docs/api-add.md)
-- [更新接口 - /admin/api/update](./docs/api-update.md)
-- [获取接口详情 - /admin/api/](./docs/api-get.md)
+- [获取所有分组 - /apijs-admin/api/group](./docs/api-group.md)
+- [获取接口列表 - /apijs-admin/api/list](./docs/api-list.md)
+- [创建接口 - /apijs-admin/api/add](./docs/api-add.md)
+- [更新接口 - /apijs-admin/api/update](./docs/api-update.md)
+- [获取接口详情 - /apijs-admin/api/](./docs/api-get.md)
 
 ## 使用
 
@@ -23,8 +23,8 @@ var apijsAdmin = require('apijs-admin');
 // 获取静态目录
 var staticDir = apijsAdmin.getPath('static');
 
-// 把/admin代理到apijs-admin
-express.use('/admin', staticDir);
+// 把 /apijs-admin 代理到apijs-admin
+express.use('/apijs-admin', staticDir);
 ```
 
 ## 注意问题

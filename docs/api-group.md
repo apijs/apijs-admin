@@ -1,4 +1,4 @@
-# 获取所有分组 - /admin/api/group
+# 获取所有分组 - /apijs-admin/api/group
 
 ## 类型
 

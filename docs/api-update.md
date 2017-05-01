@@ -1,4 +1,4 @@
-# 更新接口 - /admin/api/update
+# 更新接口 - /apijs-admin/api/update
 
 ## 类型
 

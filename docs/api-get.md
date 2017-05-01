@@ -1,4 +1,4 @@
-# 获取接口详情 - /admin/api/data
+# 获取接口详情 - /apijs-admin/api/data
 
 ## 类型
 

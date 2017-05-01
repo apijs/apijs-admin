@@ -1,4 +1,4 @@
-# 创建接口 - /admin/api/add
+# 创建接口 - /apijs-admin/api/add
 
 ## 类型
 
