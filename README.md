@@ -16,7 +16,7 @@
 
 ## 使用
 
-```
+```js
 var serveStatic = require('serve-static');
 var apijsAdmin = require('apijs-admin');
 
