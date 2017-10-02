@@ -4,7 +4,7 @@
 
 基于`webpack`、`vue`、`element-ui`打造的`apijs`后台管理服务页面, 只是静态文件, 数据接口依赖于 [apijs](https://github.com/apijs/apijs) , 发布在npm, `apijs`把渲染层指向该模块达到前后端分离, 如:
 
-![apijs流程](./docs/process.png)
+![apijs流程](//static.cdn.xuexb.com/img/process.png)
 
 ## 数据接口 - 依赖apijs
 
