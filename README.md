@@ -2,11 +2,11 @@
 
 ### 简介
 
-基于`webpack`、`vue`、`element-ui`打造的`apijs`后台管理服务页面, 只是静态文件, 数据接口依赖于 [apijs](https://github.com/apijs/apijs) , 发布在npm, `apijs`把渲染层指向该模块达到前后端分离, 如:
+基于 `webpack` 、 `vue` 、 `element-ui` 打造的 `apijs` 后台管理服务页面, 只是静态文件, 数据接口依赖于 [apijs](https://github.com/apijs/apijs) , 发布在 npm , `apijs` 把渲染层指向该模块达到前后端分离, 如:
 
 ![apijs流程](//static.cdn.xuexb.com/img/process.png)
 
-## 数据接口 - 依赖apijs
+## 数据接口 - 依赖 apijs
 
 - [获取所有分组 - /apijs-admin/api/group](./docs/api-group.md)
 - [获取接口列表 - /apijs-admin/api/list](./docs/api-list.md)
@@ -29,8 +29,8 @@ express.use('/apijs-admin', staticDir);
 
 ## 注意问题
 
-1. 由于静态是由`webpack`打包, 而在打包时就需要指定目录, 所以后台只能是`/admin/*`
-2. 使用`prepublish: release`达到发npm前打包, 通过`.gitignore`和`.npmignore`配置达到:
-    - /dist - 发布但不push
-    - /src - push但不发布
+1. 由于静态是由 `webpack` 打包, 而在打包时就需要指定目录, 所以后台只能是 `/admin/*`
+2. 使用 `prepublish: release` 发布前打包, 通过 `.gitignore` 和 `.npmignore` 配置达到:
+    - /dist - 发布但不推送
+    - /src - 推送但不发布
     - /docs - 不发布
